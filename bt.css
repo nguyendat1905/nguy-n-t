@@ -1,0 +1,136 @@
+/* Định dạng Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: blue;
+    background-color: gray;
+}
+
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    background-color: white;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+}
+
+nav ul li ul.submenu li a {
+    padding: 10px;
+}
+
+/* Định dạng Banner */
+.banner {
+    width: 100%;
+    background-color: #99f7a3;
+    height: 200px; /* Chỉnh lại chiều cao banner nếu cần */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Phần Góp Ý */
+.feedback {
+    padding: 20px;
+    text-align: center;
+}
+
+.feedback h2 {
+    color: blue;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.feedback button {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Phần Ảnh Cá Nhân */
+.personal-images {
+    padding: 10px;
+    text-align: center;
+}
+
+.personal-images h3 {
+    color: blue;
+}
+
+.image-slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide-left 5s linear infinite;
+}
+
+.image-slider img {
+    width: 200px; /* Chỉnh lại kích thước ảnh nếu cần */
+    margin: 5px;
+}
+
+/* Hiệu ứng chuyển động ảnh từ phải sang trái */
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+.personal-images {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    animation: blueBackground 10s infinite alternate; /* Adds the blue color animation */
+}
+
+@keyframes blueBackground {
+    0% {
+        background-color: #e0f7fa; /* Light blue */
+    }
+    50% {
+        background-color: #4fc3f7; /* Medium blue */
+    }
+    100% {
+        background-color: #0288d1; /* Dark blue */
+    }
+}
